@@ -1,0 +1,3 @@
+title: Accumulo Salt Formula
+description: Salt formula for installing components of Accumulo
+root_path: accumulo

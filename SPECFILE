@@ -2,6 +2,15 @@ title: Accumulo Salt Formula
 description: Salt formula for installing components of Accumulo
 root_path: accumulo
 components:
-  - title: Accumulo
-    description: Accumulo
-    sls_path: accumulo
+  - title: Accumulo Master
+    description: Accumulo Server
+    sls_path: accumulo.master
+  - title: Accumulo Slave
+    description: Accumulo Server
+    sls_path: accumulo.slave
+pillar_defaults:
+  accumulo:
+    version: accumulo-1.5.0
+    rpm_url: http://apache.mirrors.hoobly.com/accumulo/1.5.0/accumulo-1.5.0-bin.rpm
+    native_libraries_rpm_url: http://apache.mirrors.hoobly.com/accumulo/1.5.0/accumulo-1.5.0-native.rpm
+    use_native_libraries: true
